@@ -29,7 +29,7 @@ export function useUserSkills() {
       address: CONTRACTS.SKILL_REGISTRY,
       abi: SKILL_REGISTRY_ABI,
       functionName: 'isSkillVerified',
-      args: address ? [address, skill.hash] : undefined,
+      args: address ? [address, BigInt(skill.hash)] : undefined,
       query: {
         enabled: !!address && isConnected,
       },
