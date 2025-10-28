@@ -40,7 +40,7 @@ export function useUserSkills() {
       verified: !!isVerified,
       // Proficiency only shows if skill is verified
       // In production, users would set this themselves
-      level: isVerified ? 75 + (Number(BigInt(skill.hash) % 20n)) : 0,
+      level: isVerified ? 75 + (Number(BigInt(skill.hash) % BigInt(20))) : 0,
     }
   })
 
